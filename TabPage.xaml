@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NETConfPD23BlazorHybrid"
+             x:Class="NETConfPD23BlazorHybrid.TabPage"
+             xmlns:pages="clr-namespace:NETConfPD23BlazorHybrid.Components.Pages"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage Title="Magazzino">
+        <BlazorWebView Grid.Row="1" x:Name="blazorWebViewHome" HostPage="wwwroot/index.html">
+            <BlazorWebView.RootComponents>
+                <RootComponent Selector="#app" ComponentType="{x:Type pages:Home}" />
+            </BlazorWebView.RootComponents>
+        </BlazorWebView>
+    </ContentPage>
+    <ContentPage Title="Letterine">
+        <BlazorWebView Grid.Row="1" x:Name="blazorWebViewWeather" HostPage="wwwroot/index.html">
+            <BlazorWebView.RootComponents>
+                <RootComponent Selector="#app" ComponentType="{x:Type pages:Weather}" />
+            </BlazorWebView.RootComponents>
+        </BlazorWebView>
+    </ContentPage>
+    <ContentPage Title="Info">
+        <BlazorWebView Grid.Row="1" x:Name="blazorWebViewDevice" HostPage="wwwroot/index.html">
+            <BlazorWebView.RootComponents>
+                <RootComponent Selector="#app" ComponentType="{x:Type pages:DeviceInfo}" />
+            </BlazorWebView.RootComponents>
+        </BlazorWebView>
+    </ContentPage>
+
+</TabbedPage>
