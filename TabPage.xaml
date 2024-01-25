@@ -6,14 +6,14 @@
              xmlns:pages="clr-namespace:NETConfPD23BlazorHybrid.Components.Pages"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    <ContentPage Title="Magazzino">
+    <ContentPage Title="Home">
         <BlazorWebView Grid.Row="1" x:Name="blazorWebViewHome" HostPage="wwwroot/index.html">
             <BlazorWebView.RootComponents>
                 <RootComponent Selector="#app" ComponentType="{x:Type pages:Home}" />
             </BlazorWebView.RootComponents>
         </BlazorWebView>
     </ContentPage>
-    <ContentPage Title="Letterine">
+    <ContentPage Title="Weather">
         <BlazorWebView Grid.Row="1" x:Name="blazorWebViewWeather" HostPage="wwwroot/index.html">
             <BlazorWebView.RootComponents>
                 <RootComponent Selector="#app" ComponentType="{x:Type pages:Weather}" />
