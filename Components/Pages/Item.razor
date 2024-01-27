@@ -1,0 +1,19 @@
+﻿@page "/item"
+
+<h1>Item</h1>
+
+<p role="status">Bla bla bla bla bla</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Dettagli</button>
+
+@code {
+    private int currentCount = 0;
+
+    private async void IncrementCount()
+    {
+        //Microsoft.Maui.Controls.Maui.Controls.Toast.Show("Incrementing count");
+
+        await App.Current.MainPage.DisplayAlert("Info","Dettagli elemento", "OK");
+        //await App.Current.MainPage.Navigation.PushAsync(new DetailsPage());
+    }
+}
